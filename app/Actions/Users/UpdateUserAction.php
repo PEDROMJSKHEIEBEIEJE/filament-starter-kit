@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\DB;
 
 final readonly class UpdateUserAction
 {
-    public function __construct(
-        // Inject dependencies here
-    ) {}
-
     /**
      * @param array{
      *     // Define your data structure here
