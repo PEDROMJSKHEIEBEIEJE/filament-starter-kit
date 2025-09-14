@@ -33,6 +33,11 @@ final class AppPanelProvider extends PanelProvider
             ->path('app')
             ->favicon(asset('images/logo-128x128.png'))
             ->login(Login::class)
+            ->registration()
+            ->passwordReset()
+            // ->emailVerification()
+            // ->emailChangeVerification()
+            ->profile()
             ->colors([
                 'primary' => Color::Fuchsia,
             ])
