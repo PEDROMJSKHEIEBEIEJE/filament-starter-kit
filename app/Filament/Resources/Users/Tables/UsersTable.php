@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Filament\Resources\Users\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
@@ -59,6 +60,8 @@ final class UsersTable
                     ->iconSize(IconSize::Small),
                 ViewAction::make(),
                 EditAction::make(),
+                DeleteAction::make()
+                    ->using(fn (\App\Models\User $record, \App\Actions\Users\DeleteUserAction $deletAction) => $deletAction->handle($record)),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

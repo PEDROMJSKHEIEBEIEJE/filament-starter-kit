@@ -98,7 +98,7 @@ final class User extends Authenticatable implements FilamentUser, HasAvatar
         }
 
         /** @var \Illuminate\Filesystem\FilesystemAdapter $disk */
-        $disk = \Illuminate\Support\Facades\Storage::disk(config('filament.default_filesystem_disk'));
+        $disk = \Illuminate\Support\Facades\Storage::disk(config()->string('filament.default_filesystem_disk'));
 
         if (config('filament.default_filesystem_disk') === 'local') {
             return $disk->temporaryUrl($this->avatar, now()->addMinutes(5));
